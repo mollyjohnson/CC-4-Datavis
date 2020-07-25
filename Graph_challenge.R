@@ -49,10 +49,14 @@ LPI2$abundance <- as.numeric(LPI2$abundance)
 
 # HINT - use unique() to create a list of species names to choose from
 # e.g. unique(LPI2$taxonGroup)
+speciesNames <- unique(LPI$Common.Name)
+print(speciesNames)
 
 # HINT - use filter() from the dplyr package
 # e.g. my_species <- filter(LPI2, Common.Name == c("Reed bunting", "Corn bunting"))
 # Careful with the spelling, needs to be exactly like it is in the data
+mySpecies <- filter(LPI2, Common.Name == c("Northern cardinal", "Tufted titmouse"))
+print(mySpecies)
 
 # Some code to get you started
 # (scatter_plot <- ggplot(your_species, aes (x=year, y=abundance)) + geom_point() +  geom_smooth(method=lm))
